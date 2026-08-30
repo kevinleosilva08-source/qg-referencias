@@ -149,3 +149,129 @@
 | Ícones animados | finsweet.com/lottieflow + lottiefiles.com |
 | Hero animado em projeto React | motionsites.ai |
 | Inspecionar CSS de site de referência | getlayers.ai (extensão Chrome) |
+
+---
+
+## NICHO 11 — Estúdios Premium / Produto Digital / Crypto / Fintech
+
+### übernatural Studio — ubernatural.io
+- **Site:** https://ubernatural.io
+- **Dribbble:** https://dribbble.com/uxdao_io
+- **Behance:** https://behance.net/ubernatural
+- **Localização:** Dubai, UAE
+- **Stack:** Framer + Spline + Figma
+- **Especialidade:** Sites premium com animações complexas, transições suaves e elementos interativos — crypto wallets, produtos digitais, marcas premium
+- **Quando consultar:**
+  - ✅ Projetos React/Framer de alto nível visual
+  - ✅ Crypto, fintech, produto digital premium
+  - ✅ Referência de animações sofisticadas e transições cinematográficas
+  - ✅ Como apresentar um estúdio criativo com identidade forte
+  - ❌ Sites de clientes locais (advocacia, estética, marmoraria) — nível muito acima do nicho
+- **⭐ SUGESTÃO AUTOMÁTICA:** QG deve sugerir o Dribbble e Behance do übernatural sempre que o projeto for React/Framer com alto nível de animação ou produto digital premium
+
+---
+
+## BIBLIOTECAS DE COMPONENTES ANIMADOS — Adicionadas agosto 2026
+
+### Origin Kit — originkit.dev
+- **URL:** https://www.originkit.dev
+- **O que é:** Maior biblioteca gratuita de componentes animados para web — 60+ componentes incluindo efeitos de texto, galerias, carrosséis, backgrounds animados e elementos interativos
+- **Stack:** React + Framer + MCP para Claude Code
+- **Gratuito:** sim — totalmente gratuito
+- **Componentes destaque:** Particle Sphere, Gravity Gallery, Text Effects (15+), Interactive Elements (12+), Gallery (12+)
+- **MCP:** tem servidor MCP próprio — Claude Code pode acessar componentes diretamente
+- **Quando usar:**
+  - ✅ Projetos React com hero ou background animado premium
+  - ✅ Quando precisar de componente mais ousado que Magic UI ou 21st.dev
+  - ✅ Consultar junto com React Bits e 21st.dev antes de criar qualquer componente do zero
+  - ❌ Sites HTML/CSS/JS puro — não compatível
+- **Diferença dos similares:**
+  - Magic UI = efeitos visuais decorativos
+  - 21st.dev = componentes variados com seções completas
+  - Origin Kit = animações que chamam atenção, mais ousado e expressivo
+
+### Cult UI — cult-ui.com
+- **URL:** https://www.cult-ui.com
+- **GitHub:** https://github.com/nolly-studio/cult-ui
+- **21st.dev:** https://21st.dev/@cult-ui/library/cult-ui
+- **O que é:** Extensão do ecossistema shadcn/ui com componentes animados niche e motion-rich. Open source, gratuito, copy-paste
+- **Stack:** React + Tailwind CSS + shadcn/ui + Next.js
+- **Gratuito:** sim — MIT license
+- **MCP:** tem servidor MCP próprio para Claude Code
+- **Componentes destaque:** Dynamic Island, Shift Card, Family Button, Direction Aware Tabs, Texture Card, 3D Carousel, Typewriter, Pixel Heading, Animated Number, Hover Video Player
+- **Quando usar:**
+  - ✅ Projetos React/Next.js com shadcn onde componentes padrão são simples demais
+  - ✅ Consultar junto com Skiper UI e Magic UI para componentes animados
+  - ✅ Quando precisar de componentes com detalhes que "popam" — acima do padrão shadcn
+  - ❌ Sites HTML/CSS/JS puro — não compatível
+- **Diferença do shadcn/ui padrão:** shadcn = componentes funcionais acessíveis. Cult UI = os mesmos componentes com animações e detalhes visuais elaborados
+- **Disponível também no 21st.dev** — pode acessar via magic-mcp no Claude Code
+
+### Skiper UI — skiper-ui.com
+- **Status:** já documentado no painel-referencias_1.html com 10+ componentes detalhados
+- **Componentes principais:** Siena Parallax, Infinite Canvas, Image Reveal, Stairs Preloader, Double Stairs, Hover Expand, SVG Follow Scroll, Oliver Parallax, Card Stack GSAP
+- **Referência:** consultar o painel HTML para descrição completa de cada componente
+
+---
+
+## TABELA COMPARATIVA — Bibliotecas de componentes React
+
+| Biblioteca | Stack | Gratuito | MCP | Melhor para |
+|-----------|-------|---------|-----|------------|
+| Magic UI | React + Tailwind | Sim | Não | Efeitos decorativos, backgrounds, beams |
+| 21st.dev | React + shadcn | Parcial | Sim (magic-mcp) | Seções completas, heroes, cards |
+| Cult UI | React + shadcn | Sim | Sim | Componentes niche elaborados sobre shadcn |
+| Origin Kit | React + Framer | Sim | Sim | Animações expressivas e ousadas |
+| Skiper UI | React + Next.js | Parcial (pago) | Não | Componentes cinematográficos premium |
+| React Bits | React | Sim | Não | Backgrounds e efeitos variados |
+| Uiverse | CSS puro | Sim | Não | Botões, inputs, loaders CSS |
+
+---
+
+## FERRAMENTAS 3D E ANIMAÇÃO AVANÇADA — Adicionadas agosto 2026
+
+### PeachWeb — peachweb.io
+- **URL:** https://peachweb.io
+- **O que é:** Builder no-code para sites 3D WebGL — "Webflow para sites 3D". Drag-and-drop, keyframe animations, scroll triggered 3D scenes, sem código
+- **Gratuito:** plano gratuito limitado — verificar antes de usar
+- **Quando usar:**
+  - ✅ Cliente quer site 3D interativo completo sem codificar
+  - ✅ Alternativa ao Three.js quando projeto é no-code
+  - ✅ Referência visual de sites 3D premiados no Awwwards
+  - ❌ Projetos React/HTML onde o controle do código é necessário
+- **Diferença do Spline:** Spline = cria a cena 3D e exporta código. PeachWeb = builder completo de site 3D no-code
+
+### Theatre.js — theatrejs.com
+- **URL:** https://www.theatrejs.com
+- **GitHub:** https://github.com/theatre-js/theatre (12.6k ⭐)
+- **O que é:** Editor visual de animações para web — open source, gratuito. Interface com timeline, keyframes e sequenciador visual (como After Effects no browser)
+- **Stack:** funciona com Three.js, React Three Fiber, Svelte/Threlte, SVG, HTML e qualquer variável JavaScript
+- **Gratuito:** sim — open source MIT
+- **Quando usar:**
+  - ✅ Projetos 3D com animações cinematográficas complexas — portfólio pessoal `kevinleonardo.ia`
+  - ✅ Quando precisar ajustar animações visualmente em vez de codificar cada keyframe
+  - ✅ Cenas Three.js com câmera, luzes e objetos animados em sequência
+  - ❌ Animações simples de scroll ou hover — GSAP é mais adequado
+- **Integração:** funciona nativamente com Threlte (`@threlte/theatre`) e React Three Fiber
+
+### Threlte — threlte.xyz
+- **URL:** https://threlte.xyz
+- **GitHub:** https://github.com/threlte/threlte
+- **O que é:** Three.js para Svelte/SvelteKit — componentes declarativos 3D, equivalente do React Three Fiber no ecossistema Svelte
+- **Stack:** Svelte + SvelteKit + Three.js
+- **Gratuito:** sim — open source MIT
+- **Integra com:** Theatre.js (animações), Rapier (física), GLTF (modelos 3D)
+- **Quando usar:**
+  - ✅ Projetos SvelteKit que precisam de 3D
+  - ❌ Projetos React — usar React Three Fiber (R3F) em vez de Threlte
+- **Status no seu fluxo:** referência condicional — você usa React hoje, não Svelte
+
+### Relação entre as ferramentas 3D
+| Ferramenta | Papel | Stack |
+|-----------|-------|-------|
+| Spline | Criar a cena 3D visualmente e exportar código | Universal |
+| Theatre.js | Animar a cena 3D com editor visual de keyframes | Three.js + R3F + Threlte |
+| Three.js | Renderizar 3D no browser (biblioteca base) | Vanilla JS |
+| React Three Fiber | Three.js em componentes React declarativos | React |
+| Threlte | Three.js em componentes Svelte declarativos | Svelte |
+| PeachWeb | Site 3D completo no-code | No-code |
