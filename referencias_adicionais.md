@@ -275,3 +275,106 @@
 | React Three Fiber | Three.js em componentes React declarativos | React |
 | Threlte | Three.js em componentes Svelte declarativos | Svelte |
 | PeachWeb | Site 3D completo no-code | No-code |
+
+## GALERIAS DE REFERÊNCIA — bibliotecas de sites para modelos e inspiração visual
+
+Seção centralizada de sites que funcionam como **acervo navegável** de referências reais — diferente das seções de sites individuais por nicho e das bibliotecas de componentes React (código pronto). Aqui o objetivo é: abrir, navegar por estilo/categoria, e extrair formato/layout/composição para adaptar ao que o Claude Code consegue executar no stack do projeto.
+
+### things.co
+- **O que é:** galeria curada de sites premium, forte em animação e interação
+- **⭐ CONSULTA OBRIGATÓRIA** — já definida no processo de 7 etapas (QG_Criacao_Sites.md)
+
+### land-book.com
+- **O que é:** galeria filtrável por estilo, indústria e tipo de página — grande volume de exemplos reais
+- **⭐ CONSULTA OBRIGATÓRIA** — já definida no processo de 7 etapas (QG_Criacao_Sites.md)
+
+### awwwards.com
+- **O que é:** premiação e galeria de sites "Site of the Day" — referência de altíssimo nível, julgados por design, usabilidade, criatividade e conteúdo
+- **⭐ CONSULTA OBRIGATÓRIA** — já definida no processo de 7 etapas (QG_Criacao_Sites.md)
+- **Ressalva:** favorece experiências de alto orçamento e muito animadas — usar como referência de composição/tipografia mesmo quando a complexidade técnica não for replicável em sites de clientes locais
+
+### godly.website
+- **O que é:** galeria curada com foco específico em animação e interação de ponta — thumbnails já mostram a animação antes de clicar
+- **Quando consultar:** mesmo peso de things.co/land-book/awwwards — adicionar à rotina de consulta do processo de 7 etapas
+- **Gratuito:** sim
+
+### framer.com/gallery
+- **O que é:** galeria oficial da Framer com **sites reais publicados** (não templates), filtrável por estilo: Animations, Dark, Light, Minimal, Grid, Large Type, Colorful
+- **Quando consultar:** referência de composição e tipografia mesmo fora do ecossistema Framer — são sites em produção, servem de inspiração real independente do stack usado pra construir
+- **Ressalva:** os sites são feitos em Framer (React por baixo) — qualquer efeito visto precisa ser adaptado ao stack real do projeto, nunca copiado como componente pronto
+
+### Regra de uso destas galerias
+Extrair o **formato** (composição, hierarquia, tipografia, ritmo de seções) e aplicar de acordo com o que o Claude Code consegue executar no stack do projeto — nunca prometer no prompt um efeito visto na referência sem confirmar que é tecnicamente viável no stack real (HTML/CSS/JS puro, na maioria dos projetos de cliente local).
+
+---
+
+## FERRAMENTAS DE ANIMAÇÃO E MOTION — Adicionadas setembro 2026
+
+### lenis.dev
+- **O que é:** biblioteca de scroll suave, leve e moderna (Studio Freight) — sucessor de facto do Locomotive Scroll no mercado
+- **Quando usar:** candidato a substituir `locomotive-scroll` como padrão em novos projetos e em correções de bug de scroll
+- **Gratuito:** sim — open source
+
+### paper.design/shaders (@paper-design/shaders)
+- **O que é:** shaders zero-dependência para canvas HTML — mesh gradient, dot orbit, grain animado, glass distortion
+- **Stack:** funciona em HTML/CSS/JS puro (vanilla) e React — compatível com o stack dos sites de cliente
+- **Quando usar:** backgrounds animados premium (orbs, grain, mesh gradient) sem precisar de Three.js pesado
+- **Gratuito:** sim — licença PolyForm Shield, uso comercial permitido
+
+### rive.app
+- **O que é:** animação vetorial interativa com state machines — runtime leve, exporta pra web/app
+- **Quando usar:** ícones e ilustrações animadas mais sofisticadas que Lottie, com menor peso de arquivo
+- **Gratuito:** plano gratuito disponível
+
+---
+
+## FERRAMENTAS DE APOIO — Adicionadas setembro 2026
+
+### ls.graphics
+- **O que é:** mockups de dispositivo realistas (MacBook, iPhone, iPad) para apresentação de proposta/portfólio + **Colorflow**, gerador de mesh gradient direto no navegador (exporta CSS)
+- **Quando usar:** apresentar site pro cliente com mais impacto visual; gerar gradiente de hero sem depender de Figma
+- **Gratuito:** coleção gratuita disponível, planos pagos para acesso completo
+
+### unblast
+- **O que é:** banco de recursos gratuitos — mockups, fontes, ícones, ilustrações, templates
+- **Quando usar:** banco reserva quando Pexels/Unsplash não tiverem imagem adequada ao nicho
+- **Gratuito:** sim
+
+### fontpair
+- **O que é:** ferramenta de pareamento de fontes
+- **Quando usar:** complementa o Fontjoy já usado na etapa de tipografia do processo de 7 etapas
+- **Gratuito:** sim
+
+### undraw
+- **O que é:** ilustrações SVG gratuitas com cor customizável para bater com qualquer paleta
+- **Quando usar:** seções que precisam de ilustração em vez de foto (ex: cliente sem fotos profissionais)
+- **Gratuito:** sim
+
+### sitesnapper
+- **O que é:** ferramenta de arquivamento de páginas web — screenshot em alta qualidade + metadados + texto da página
+- **Quando usar:** guardar referência visual de um site achado durante pesquisa, sem perder o link
+- **⚠️ Não faz:** não extrai CSS nem reconstrói código — para isso, usar GetLayers (já catalogado)
+- **Gratuito:** verificar plano no momento do uso
+
+### contentcore.xyz
+- **O que é:** SaaS de mockup 3D, ícones e templates de motion direto no navegador
+- **Quando usar:** criar material de portfólio/apresentação mais rápido, sem After Effects
+- **Gratuito:** modelo por assinatura — verificar plano gratuito
+
+---
+
+## TABELA — Ferramentas de apoio por situação
+
+| Situação | Ferramenta |
+|---------|-----------|
+| Scroll suave em novo projeto ou correção de bug | lenis.dev |
+| Background animado (orbs, grain, mesh gradient) sem framework pesado | paper.design/shaders |
+| Ícone ou ilustração animada leve | rive.app |
+| Apresentar site pro cliente em mockup de dispositivo | ls.graphics |
+| Gerar gradiente premium tipo Stripe/Linear/Vercel | ls.graphics (Colorflow) |
+| Banco reserva de mockup/ícone/fonte | unblast |
+| Pareamento de fontes | fontpair (+ Fontjoy) |
+| Ilustração SVG customizável em vez de foto | undraw |
+| Guardar referência visual de site achado em pesquisa | sitesnapper |
+| Extrair CSS/fontes de site de referência | getlayers.ai (já catalogado) |
+| Mockup 3D ou motion rápido para apresentação | contentcore.xyz |
