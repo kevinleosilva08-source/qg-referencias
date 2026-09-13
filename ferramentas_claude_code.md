@@ -323,3 +323,33 @@ Skills de framework interno (não usar diretamente):
 
 ## TOTAL DE SKILLS: 66
 *Última atualização: agosto 2026*
+
+---
+
+## ATUALIZAÇÃO — setembro 2026
+
+### `design-taste-frontend` agora instalada globalmente
+
+Confirmado: instalada em `C:\Users\Kevin\.claude\skills\design-taste-frontend` (global — funciona em qualquer projeto, dentro ou fora de `Work`). A cópia antiga em `Work\.claude\skills` continua existindo também, sem conflito (a local tem prioridade sobre a global só se um dia for editada separadamente).
+
+### Skill oficial da Anthropic adicionada ao bloco obrigatório
+
+`anthropic-skills:frontend-design` é DIFERENTE de `design-taste-frontend` (não é redundante):
+- `design-taste-frontend`: regras técnicas/arquiteturais — component architecture, CSS hardware acceleration
+- `anthropic-skills:frontend-design`: oficial da Anthropic — direção estética, tipografia, evitar cara de template genérico
+
+Adicionar ao BLOCO OBRIGATÓRIO — INÍCIO DE TODO PROMPT (nova linha 8.5, entre `ui-ux-pro-max` e `theme-factory`):
+
+```
+8.5. cat "/c/Users/Kevin/.claude/skills/frontend-design/SKILL.md"
+```
+
+### Comando de ativação explícita — reforço opcional
+
+Além de ler via `cat` (que já força a leitura do conteúdo), pode-se também ativar explicitamente no início do prompt do usuário, como reforço:
+
+```
+/ui-ux-pro-max
+```
+
+Isso aciona a skill diretamente antes de qualquer outra instrução — usado no método "site $10k" (tutorial de referência) para garantir ativação, especialmente útil em projetos novos onde o gatilho automático por contexto pode não disparar.
