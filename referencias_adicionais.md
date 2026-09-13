@@ -378,3 +378,52 @@ Extrair o **formato** (composição, hierarquia, tipografia, ritmo de seções) 
 | Guardar referência visual de site achado em pesquisa | sitesnapper |
 | Extrair CSS/fontes de site de referência | getlayers.ai (já catalogado) |
 | Mockup 3D ou motion rápido para apresentação | contentcore.xyz |
+
+---
+
+## GETDESIGN.MD — Ferramenta de extração de sistema de design (setembro 2026)
+
+### O que é
+Catálogo de arquivos `DESIGN.md` — documentos estruturados (YAML + markdown) que documentam o sistema de design completo de um site real: paleta de cor exata, escala tipográfica (fonte, peso, tamanho, tracking), componentes nomeados com uso descrito, regras de "Do's and Don'ts", breakpoints responsivos, e até uma seção "Known Gaps" assumindo limitações da própria análise automatizada.
+
+`DESIGN.md` segue uma especificação aberta (mencionada como "official Google DESIGN.md spec"); existe inclusive um pacote npm oficial (`@google/design.md`) com comando de lint (`npx @google/design.md lint DESIGN.md`) que verifica contraste, referências quebradas e tokens órfãos — relevante agora que o Node.js está instalado.
+
+### Modelo de acesso (confirmado por teste real)
+- **Catálogo geral (550+ sites)**: download individual de cada arquivo é **gratuito** — testado e confirmado com BMW M e Nike, simplesmente clicando no botão de download
+- **"Catalog Pass" (US$99/mês)**: cobre apenas uma **coleção curada separada** (35+ arquivos, com adições mensais), não o catálogo geral — não é necessário assinar para acessar os arquivos individuais do catálogo principal
+
+### Quando usar
+Em vez de analisar visualmente um site de referência (sujeito a interpretação/erro), baixar o `DESIGN.md` correspondente e enviar o arquivo inteiro junto com o prompt ao Claude Code — funciona como uma "receita exata" de paleta, tipografia e componentes, sem ambiguidade.
+
+### Exemplos já baixados e catalogados
+
+**BMW M** — referência forte para **estética automotiva**: paleta quase monocromática (preto/branco) com a faixa tricolor M como único acento, cantos sempre retos (nunca arredondados — regra explícita de marca), fotografia automotiva full-bleed como "voltagem" visual, peso tipográfico contrastante (display 700 / corpo 300), letter-spacing 1.5px em labels maiúsculas para sensação "usinada".
+
+**Nike** — referência de e-commerce/varejo esportivo: extremo oposto da BMW em várias decisões (botões sempre em pílula, nunca reto; nunca sombra/elevação de card; tipografia display 96px reservada exclusivamente para lockups editoriais, nunca em título de seção comum). Útil como estudo de como dois sistemas fortes fazem escolhas deliberadamente opostas — vale mais como referência de metodologia do que para os 4 nichos atuais (automotiva, imobiliária, eventos, veterinária), já que não há sobreposição direta de segmento.
+
+### Como baixar mais (processo correto)
+Acessar `getdesign.md` (tela inicial) → rolar a página para baixo — a lista completa de marcas já catalogadas aparece em ordem alfabética direto ali, sem precisar de busca → clicar na marca desejada → botão **"Download DESIGN.md"** do lado direito (gratuito, sem necessidade de assinar o Catalog Pass).
+
+⚠️ Não usar a página "Browse website catalog" com a caixa de busca por texto — o filtro dela é mais limitado e pode não encontrar marcas que existem no sistema (ex: buscar "real estate" ali não traz nada relevante, mas a marca pode estar acessível rolando a lista da home ou via URL direta `getdesign.md/{nome-da-marca}/design-md`).
+
+### Lógica de aplicação por nicho (não é busca literal por segmento)
+Mapear qual categoria de marca já catalogada carrega a **estética/sentimento certo** para o projeto, mesmo que o produto dela não tenha nada a ver com o nicho do cliente:
+- **Estética automotiva** → marcas de carro/automóveis (aplicação direta)
+- **Imobiliária** → marcas de negócio/corporativo/prédios (solidez, estrutura — não precisa ser imobiliária de verdade)
+- **Clínica veterinária** → marcas relacionadas a animais, ou de cunho social/humano/cuidado (tom de acolhimento)
+- **Salão de eventos** → provavelmente não terá boa referência direta aqui; usar outras fontes (godly.website, land-book, Behance) como principal, recorrendo ao getdesign.md só se aparecer uma marca pontual com paleta/layout aproveitável
+
+---
+
+## BEHANCE — plataforma de busca por nicho (setembro 2026)
+
+Diferente da entrada já existente (perfil específico do designer "übernatural"), esta cobre o Behance como **plataforma geral de busca**, complementar ao `getdesign.md`.
+
+### Quando usar
+Cobre a lacuna que `getdesign.md` deixa: nichos sem marca real publicada com site bonito (ex: salão de eventos). O Behance tem muitos projetos **conceituais/especulativos** — designers publicam redesign fictício ou conceito de branding/UI para qualquer tipo de negócio como exercício de portfólio, mesmo sem o negócio existir de verdade.
+
+### Como buscar
+Termos ligados ao nicho + "branding" / "web design" / "UI concept" (ex: "veterinary clinic branding", "event venue UI concept", "real estate web design concept").
+
+### Limitação
+Sem código — só imagem/protótipo estático. Serve para composição, paleta e tipografia; não substitui referências de animação/interação (usar godly.website, land-book, 21st.dev para isso).
