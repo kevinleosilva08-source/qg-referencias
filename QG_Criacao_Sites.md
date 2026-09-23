@@ -57,7 +57,7 @@ Todo projeto novo deve seguir esta ordem antes de escrever qualquer código ou p
 ### Etapa 1 — Consultar referências
 
 **Obrigatórias em todo projeto:**
-- Abrir `painel_referencias_sites.md` — referências organizadas por nicho
+- Abrir `painel-referencias_1.html` — referências organizadas por nicho
 - Consultar things.co — curadoria premium global
 - Consultar awwwards.com filtrado pelo nicho do projeto
 - Consultar land-book.com — galeria de landing pages por palavra-chave

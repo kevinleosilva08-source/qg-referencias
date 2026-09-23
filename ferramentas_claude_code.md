@@ -1,5 +1,5 @@
 # Ferramentas e Skills — Claude Code
-## Versão atualizada em agosto 2026 — 66 skills + 5 MCPs
+## Versão atualizada em setembro 2026 — 66 skills + 5 MCPs
 
 ---
 
@@ -11,15 +11,13 @@ Copiar e colar no início de QUALQUER prompt de criação ou alteração de site
 ANTES DE COMEÇAR — leia as seguintes skills nesta ordem e aplique todas as diretrizes encontradas durante toda a execução:
 
 1. cat "/c/Users/Kevin/.claude/Work/.claude/skills/design-taste-frontend"
-2. cat "/c/Users/Kevin/.claude/Work/.claude/skills/ui-styling"
-3. cat "/c/Users/Kevin/.claude/Work/.claude/skills/design"
-4. cat "/c/Users/Kevin/.claude/Work/.claude/skills/design-system"
-5. cat "/c/Users/Kevin/.claude/Work/.claude/skills/banner-design"
-6. cat "/c/Users/Kevin/.claude/Work/.claude/skills/find-animation-opportunities"
-7. cat "/c/Users/Kevin/.claude/Work/.claude/skills/animation-vocabulary"
-8. cat "/c/Users/Kevin/.claude/Work/.claude/skills/ui-ux-pro-max"
-9. cat "/c/Users/Kevin/.claude/Work/.claude/skills/theme-factory"
-10. cat "/c/Users/Kevin/.claude/Work/.claude/skills/emil-design-eng"
+2. cat "/c/Users/Kevin/.claude/Work/.claude/skills/ui-ux-pro-max"
+3. cat "/c/Users/Kevin/.claude/Work/.claude/skills/banner-design"
+4. cat "/c/Users/Kevin/.claude/Work/.claude/skills/ui-styling"
+5. cat "/c/Users/Kevin/.claude/Work/.claude/skills/animation-vocabulary"
+6. cat "/c/Users/Kevin/.claude/Work/.claude/skills/emil-design-eng"
+[Condicional — somente se cliente tiver logo/identidade visual definida:]
+7. cat "/c/Users/Kevin/.claude/Work/.claude/skills/design"
 ```
 
 Exceção: cardápios e portfólios puramente expositivos — omitir `ui-ux-pro-max`.
@@ -31,19 +29,22 @@ Exceção: cardápios e portfólios puramente expositivos — omitir `ui-ux-pro-
 ```
 ANTES DO DEPLOY — executar nesta ordem:
 
-1. cat "/c/Users/Kevin/.claude/Work/.claude/skills/review-animations"
+1. cat "/c/Users/Kevin/.claude/Work/.claude/skills/find-animation-opportunities"
+   Rodar sobre a interface já criada — identifica onde ainda falta animação.
+
+2. cat "/c/Users/Kevin/.claude/Work/.claude/skills/review-animations"
    Revisar criticamente todas as animações implementadas.
 
-2. cat "/c/Users/Kevin/.claude/Work/.claude/skills/improve-animations"
+3. cat "/c/Users/Kevin/.claude/Work/.claude/skills/improve-animations"
    Refinar e melhorar as animações após a revisão.
 
-3. cat "/c/Users/Kevin/.claude/Work/.claude/skills/modern-web-design"
+4. cat "/c/Users/Kevin/.claude/Work/.claude/skills/modern-web-design"
    Verificar qualidade geral do design contra princípios modernos.
 
-4. cat "/c/Users/Kevin/.claude/Work/.claude/skills/web-design-guidelines"
+5. cat "/c/Users/Kevin/.claude/Work/.claude/skills/web-design-guidelines"
    Auditar HTML e CSS contra as diretrizes da Vercel.
 
-5. cat "/c/Users/Kevin/.claude/Work/.claude/skills/webapp-testing"
+6. cat "/c/Users/Kevin/.claude/Work/.claude/skills/webapp-testing"
    Testar o site no browser — responsividade (375px, 768px, 1280px),
    botões, links, animações e performance. Corrigir tudo antes do commit.
 ```
@@ -69,8 +70,8 @@ O QG identifica e inclui automaticamente as skills condicionais no prompt. Kevin
 ### Animação e Scroll
 | Skill | Quando incluir |
 |-------|---------------|
-| `gsap-scrolltrigger` | Todo site premium — scroll cinematográfico, elementos que aparecem ao rolar, seção de processo com linha SVG |
-| `locomotive-scroll` | Junto com GSAP em todo site premium — scroll suave que eleva a qualidade percebida |
+| `gsap-scrolltrigger` | Todo site premium — scroll cinematográfico, elementos que aparecem ao rolar, seção de processo com linha SVG. **Sempre com fallback CSS + IntersectionObserver** (CDN pode ser bloqueado por ad-blocker) |
+| `locomotive-scroll` | Junto com GSAP em todo site premium — scroll suave. Usa a biblioteca **Lenis** (não Locomotive legado). O nome da skill é `locomotive-scroll`, mas o código gerado usa Lenis |
 | `animejs` | Sempre que houver SVG animado — balança, linha de processo, ícones vetoriais |
 | `lottie-animations` | Sempre que houver ícones animados ou ilustrações em loop — alternativa ao SVG manual |
 | `rive-interactive` | Quando o elemento principal do hero for animado — balança, mascote, ícone interativo |
@@ -99,9 +100,10 @@ O QG identifica e inclui automaticamente as skills condicionais no prompt. Kevin
 ### Identidade e Branding
 | Skill | Quando incluir |
 |-------|---------------|
-| `brand` | Cliente tem identidade visual definida (logo, cores, tipografia) |
-| `brand-guidelines` | Aplicar diretrizes de marca com consistência em todo o projeto |
+| `brand` | Cliente tem identidade visual definida (logo, cores, tipografia) — usar sempre para aplicar/manter consistência da marca do cliente |
 | `apple-design` | Visual minimalista premium estilo Apple |
+
+⚠️ **`brand-guidelines` não entra aqui** — aplica as cores/tipografia da própria Anthropic, não do cliente. Ver GRUPO 6 e a regra crítica no `CLAUDE.md`.
 
 ### Material Gráfico
 | Skill | Quando incluir |
@@ -170,8 +172,8 @@ O QG identifica e inclui automaticamente as skills condicionais no prompt. Kevin
 | Skill | Status | Quando usar |
 |-------|--------|------------|
 | `ui-ux-pro-max` | ✅ Obrigatória | Todo site de cliente com CTA — exceção: cardápios e portfólios expositivos |
-| `design` | ✅ Obrigatória | Diretrizes gerais de design — ler no início de todo projeto |
-| `design-system` | ✅ Obrigatória | Entra no bloco padrão — consistência visual em qualquer projeto |
+| `design` | ⚡ Condicional | Somente se cliente tiver logo/identidade visual definida |
+| `design-system` | ⚡ Condicional React | Apenas projetos React — em HTML/CSS/JS, ui-ux-pro-max já cobre |
 | `brand` | ⚡ Condicional | Cliente com identidade visual definida |
 | `banner-design` | ✅ Obrigatória | Entra no bloco padrão — hero, CTAs e banners |
 | `ui-styling` | ✅ Obrigatória | Estilização de qualquer componente UI |
@@ -203,7 +205,7 @@ Skills de framework interno (não usar diretamente):
 |-------|--------|------------|
 | `emil-design-eng` | ✅ Obrigatória | Framework de animação profissional |
 | `animation-vocabulary` | ✅ Obrigatória | Nomear animações antes de implementar |
-| `find-animation-opportunities` | ✅ Obrigatória | Identificar onde animar |
+| `find-animation-opportunities` | ✅ Final obrigatório | Rodar sobre a interface já criada — NUNCA no início |
 | `improve-animations` | ✅ Final obrigatório | Refinar após gerar |
 | `review-animations` | ✅ Final obrigatório | Revisão crítica antes do deploy |
 | `apple-design` | ⚡ Condicional | Visual minimalista premium |
@@ -262,13 +264,13 @@ Skills de framework interno (não usar diretamente):
 | Skill | Status | Quando usar |
 |-------|--------|------------|
 | `webapp-testing` | ✅ Final obrigatório | Testar o site antes de todo deploy |
-| `theme-factory` | ✅ Obrigatória | Gerar sistema de design no início |
+| `theme-factory` | 🚫 Não usar em sites | Feito para Artifacts do claude.ai — sem efeito em projetos Vercel locais |
 | `web-design-guidelines` | ✅ Final obrigatório | Auditar contra diretrizes da Vercel |
 | `web-artifacts-builder` | ⚡ Condicional | Componentes React complexos |
 | `canvas-design` | ⚡ Condicional | Banners e material gráfico |
 | `slack-gif-creator` | ⚡ Condicional | GIF animado de imagem |
 | `algorithmic-art` | ⚡ Condicional | Arte generativa como fundo |
-| `brand-guidelines` | ⚡ Condicional | Cliente com identidade visual própria |
+| `brand-guidelines` | 🚫 Nunca em clientes | Aplica a marca da própria Anthropic — usar só para materiais relacionados à Anthropic, se algum dia necessário |
 
 ---
 
@@ -294,9 +296,11 @@ Skills de framework interno (não usar diretamente):
 ## FLUXO DE USO DAS SKILLS POR TIPO DE PROJETO
 
 ### Site HTML/CSS/JS de cliente (advocacia, estética, restaurante)
-**Início:** design-taste-frontend + ui-styling + design + design-system + banner-design + find-animation-opportunities + animation-vocabulary + ui-ux-pro-max + theme-factory + emil-design-eng
-**Condicionais comuns:** gsap-scrolltrigger + locomotive-scroll + animejs + lottie-animations + lightweight-3d-effects
-**Final:** review-animations + improve-animations + modern-web-design + web-design-guidelines + webapp-testing
+**Início (6 obrigatórias):** design-taste-frontend + ui-ux-pro-max + banner-design + ui-styling + animation-vocabulary + emil-design-eng
+**Condicional de identidade:** design (somente se cliente tiver logo/identidade visual definida)
+**Condicionais técnicas:** gsap-scrolltrigger (+ fallback CSS) + locomotive-scroll + animejs (se SVG animado) + apple-design (se visual minimalista)
+**Nunca incluir:** theme-factory · design-system · scroll-reveal-libraries (AOS) junto com GSAP
+**Final (6 em ordem):** find-animation-opportunities + review-animations + improve-animations + modern-web-design + web-design-guidelines + webapp-testing
 
 ### Site React de cliente (arquitetura, loja virtual)
 **Início:** bloco padrão completo + pick-ui-library
@@ -309,7 +313,7 @@ Skills de framework interno (não usar diretamente):
 **Final:** bloco final completo
 
 ### Cardápio digital
-**Início:** design-taste-frontend + ui-styling + design + design-system + find-animation-opportunities + animation-vocabulary + theme-factory + emil-design-eng
+**Início:** design-taste-frontend + ui-styling + design + design-system + animation-vocabulary + emil-design-eng
 *(sem ui-ux-pro-max — foco em informação, não conversão)*
 **Final:** bloco final completo
 
@@ -322,7 +326,7 @@ Skills de framework interno (não usar diretamente):
 ---
 
 ## TOTAL DE SKILLS: 66
-*Última atualização: agosto 2026*
+*Última atualização: setembro 2026*
 
 ---
 
