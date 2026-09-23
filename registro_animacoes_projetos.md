@@ -255,16 +255,183 @@ Objetivo: evitar repetição entre projetos e servir como material de aprendizad
 
 ---
 
+### SITE 05 — Dr. Pedro Almeida
+
+**Nicho:** Advocacia — Pensão alimentícia
+**URL:** advogadopedroalmeida.com.br
+**Stack:** HTML/CSS/JS puro
+
+#### Tipografia
+| Papel | Fonte | Observação |
+|-------|-------|------------|
+| Display (títulos) | Playfair Display | Serifada editorial clássica |
+| Corpo / UI | Vesper Libre | Serifada de leitura, corpo e UI |
+
+#### Paleta
+`--slate: #1C2B3A` · `--amber: #B45309` · `--warm: #F8F5F0` · `--ink: #0F172A` · `--accent-on-dark: #E0A458`
+
+#### Scripts ativos
+| Biblioteca | Versão | Função |
+|-----------|--------|--------|
+| locomotive-scroll | 4.1.4 | Scroll suave (legado) |
+| gsap | 3.12.5 | Animações de scroll |
+| ScrollTrigger | 3.12.5 | Plugin GSAP |
+| animejs | 3.2.2 | Elementos SVG |
+| aos | 2.3.1 | Reveal adicional ⚠️ Redundante com GSAP |
+
+⚠️ **Atenção:** AOS e GSAP usados simultaneamente — dois sistemas de scroll-reveal competindo. Ver aprendizado no SITE 07.
+
+#### Animações de entrada
+| Elemento | Animação | Técnica |
+|----------|----------|---------|
+| Elementos gerais | Scroll Reveal Fade In + Translate Y | `data-aos="fade-up"` |
+| Hero — conteúdo | Fade In escalonado | Delay progressivo por elemento |
+
+#### Fundo e textura
+| Seção | Elemento visual |
+|-------|----------------|
+| Hero | Slate escuro com gradiente diagonal suave |
+| Seções claras | Warm (`#F8F5F0`) com variações warm-alt e warm-deep |
+
+---
+
+### SITE 06 — Espaço Alfa
+
+**Nicho:** Salão de Eventos
+**URL:** espaco-alfa-two.vercel.app
+**Stack:** HTML/CSS/JS puro
+
+#### Tipografia
+| Papel | Fonte | Observação |
+|-------|-------|------------|
+| Display (títulos) | Fraunces | Serifada orgânica, cálida — combina com o tom acolhedor do salão |
+| Corpo / UI | Manrope | Geométrica moderna, legível |
+
+#### Paleta
+Verde Starbucks `#006241`, `#00754A`, `#1E3932` + creme `#f2f0eb`
+
+#### Scripts ativos
+| Biblioteca | Versão | Função |
+|-----------|--------|--------|
+| gsap | 3.12.5 | Animações de scroll |
+| ScrollTrigger | 3.12.5 | Plugin GSAP |
+| lenis | 1.1.14 | Scroll suave (Lenis — não legado) |
+
+#### Animações de entrada
+| Elemento | Animação |
+|----------|---------|
+| Elementos gerais | Scroll Reveal via GSAP ScrollTrigger + Fade In |
+| Hero | Slideshow fullscreen automático de fotos do salão |
+| Cards de diferenciais | Fade In escalonado com ícone verde centralizado |
+
+#### Fundo e textura
+| Seção | Elemento visual |
+|-------|----------------|
+| Seções claras | Creme `#f2f0eb` |
+| Seções escuras | Verde Starbucks profundo |
+
+---
+
+### SITE 07 — Marmoraria Flinstones
+
+**Nicho:** Marmoraria
+**URL:** marmoraria-flinstones.vercel.app
+**Stack:** HTML/CSS/JS puro
+
+#### Tipografia
+| Papel | Fonte | Observação |
+|-------|-------|------------|
+| Display (títulos) | Bebas Neue | Geométrica display, toda caixa alta — técnica e masculina (2º uso — ver Everest v2) |
+| Corpo / UI | DM Sans | Geométrica limpa, excelente legibilidade |
+
+#### Paleta
+Grafite escuro `#1A1A1A` aprox + dourado `#B8962E` aprox + fundo mármore branco como textura
+
+#### Scripts ativos
+| Biblioteca | Versão | Função |
+|-----------|--------|--------|
+| lenis | 1.1.14 | Scroll suave |
+
+**⚠️ GSAP removido em produção** — estava no prompt, mas bloqueado silenciosamente por ad-blocker via CDN. Solução aplicada: CSS transitions + IntersectionObserver nativo como base completa.
+
+#### Animações de entrada
+| Elemento | Animação |
+|----------|---------|
+| Elementos gerais | CSS transitions + IntersectionObserver (sem GSAP) |
+| Cards de serviço | Fundo com textura real da pedra (Blue Bahia, Ônix Âmbar, etc.) |
+
+#### Fundo e textura
+| Seção | Elemento visual |
+|-------|----------------|
+| Fundo do site | Textura de mármore branco como background geral |
+| Cards de serviço | Foto real da pedra como fundo do card (Quartzito Verde, Blue Bahia, Ônix Âmbar, Travertino) |
+
+#### Aprendizado crítico — GSAP CDN
+> GSAP carregado via CDN foi bloqueado silenciosamente por ad-blocker do cliente em produção — sem erro no console, sem fallback. Todas as animações falharam sem qualquer indicação visual. **Solução permanente:** CSS transitions + IntersectionObserver como camada base completa; GSAP apenas como progressive enhancement quando carregar.
+
+---
+
+### SITE 08 — Petshop Manda-chuva
+
+**Nicho:** Petshop + Clínica Veterinária
+**URL:** petshop-manda-chuva.vercel.app
+**Stack:** HTML/CSS/JS puro
+
+#### Paleta
+Verde-água `#2BA8A8` + laranja `#FF6B35` + branco
+
+#### Tipografia
+A verificar via JS em próxima sessão.
+
+#### Animações e estrutura visual
+| Elemento | Animação / Característica |
+|----------|--------------------------|
+| Hero | Gato + cachorro sem fundo sobre base orgânica SVG |
+| Transições de seção | Curva SVG obrigatória — nunca linha reta |
+| Grid de diferenciais | 8 equipamentos com ícone + título |
+| Depoimentos | Cards com float (não carrossel) |
+
+---
+
+### SITE 09 — Flash Estética Automotiva
+
+**Nicho:** Estética Automotiva
+**URL:** flash-estetica-automotiva.vercel.app
+**Stack:** HTML/CSS/JS puro
+
+#### Tipografia
+| Papel | Fonte | Observação |
+|-------|-------|------------|
+| Display (títulos) | Bebas Neue | Geométrica display, toda caixa alta — 2º projeto a usar essa fonte (ver Flinstones) |
+| Corpo | Sans-serif condensada | A confirmar via JS |
+
+#### Paleta
+Preto `#000000` (paleta BMW M via getdesign.md) + faixa tricolor M (azul/roxo/vermelho) como detalhe de header + dourado/âmbar em preços e CTAs secundários
+
+**Nota:** Preto puro aprovado como exceção à regra global — justificado pela referência BMW M via `getdesign.md`.
+
+#### Animações e estrutura visual
+| Elemento | Característica |
+|----------|---------------|
+| Hero | Headline grande à esquerda + faixa tricolor no topo |
+| Serviços | Layout alternado foto/texto por serviço |
+| Antes e depois | Slider drag com 3 comparações (polimento, higienização, cerâmica) |
+| Botão CTA principal | Branco sólido sobre preto |
+
+---
+
 ## RESUMO DE DIVERSIDADE — O QUE JÁ FOI USADO
 
 ### Fontes display (títulos grandes)
 | Fonte | Projeto | Personalidade |
 |-------|---------|--------------|
 | Cormorant Garamond | Everest v1 | Serifada elegante, neutra |
-| Bebas Neue | Everest v2 | Display geométrica, toda maiúscula, masculina |
+| Bebas Neue | Everest v2, Flinstones, Flash | Display geométrica, toda maiúscula, masculina — usada em 3 projetos |
 | Cormorant (italic) | Laryssa | Serifada italiana com calor, feminina |
 | Libre Baskerville | Carol | Serifada editorial robusta, clínica |
 | Bodoni Moda | Renata | Serifada italiana de glamour, a mais sofisticada |
+| Playfair Display | Dr. Pedro | Serifada editorial clássica, advocacia |
+| Fraunces | Espaço Alfa | Serifada orgânica e cálida, eventos |
 
 ### Animações de entrada já usadas
 - Fade In + Translate Y (universal — usar como base, variar com elementos adicionais)
@@ -287,6 +454,24 @@ Objetivo: evitar repetição entre projetos e servir como material de aprendizad
 
 ### Animações contínuas de fundo já usadas
 - Soft Aurora com blobs CSS (Renata)
+
+### Bibliotecas de scroll por projeto
+| Projeto | Biblioteca | Versão |
+|---------|-----------|--------|
+| Everest | — | Sem scroll suave |
+| Laryssa | — | Sem scroll suave |
+| Carol | — | Sem scroll suave |
+| Renata | — | Sem scroll suave |
+| Dr. Pedro | locomotive-scroll (legado) | 4.1.4 |
+| Espaço Alfa | Lenis | 1.1.14 |
+| Flinstones | Lenis | 1.1.14 |
+| Flash | A confirmar | — |
+| Petshop | A confirmar | — |
+
+**Regra:** A skill se chama `locomotive-scroll`, mas o código gerado usa **Lenis** (não o Locomotive legado). Lenis é a versão recomendada a partir de 2024.
+
+### ⚠️ Aprendizado crítico — GSAP CDN
+> GSAP carregado via CDN (`cdnjs.cloudflare.com`) pode ser bloqueado silenciosamente por ad-blocker em produção, sem nenhum erro no console. Todas as animações falham sem indicação visual. **Regra permanente:** sempre implementar CSS transitions + IntersectionObserver como camada base completa. GSAP entra como progressive enhancement por cima, se carregar.
 
 ### O QUE AINDA NÃO FOI USADO — próximos projetos
 - Partículas (canvas ou biblioteca leve)
