@@ -420,6 +420,51 @@ Preto `#000000` (paleta BMW M via getdesign.md) + faixa tricolor M (azul/roxo/ve
 
 ---
 
+### SITE 10 - Bento Restaurante e Wine Bar
+
+**Nicho:** Restaurante e Wine Bar
+**URL:** bento-restaurante-ebon.vercel.app
+**Stack:** HTML/CSS/JS puro
+
+#### Tipografia
+| Papel | Fonte | Observação |
+|-------|-------|------------|
+| Display (títulos) | Fraunces | Serifada orgânica e cálida (2º uso, ver Espaço Alfa) |
+| Nome em script | Yellowtail | Script cursiva, usada só no nome do restaurante |
+| Corpo / UI | DM Sans | Geométrica limpa (2º uso, ver Flinstones) |
+| Preços | DM Mono | Monoespaçada, alinha os valores do cardápio |
+
+#### Paleta
+Preto `#0A0908` + painel `#141210` + branco quente `#F5F3EF` + dourado `#C9A44C` só em detalhes
+
+#### Scripts ativos
+| Biblioteca | Versão | Função |
+|-----------|--------|--------|
+| gsap | A confirmar | Animações de scroll |
+| ScrollTrigger | A confirmar | Plugin GSAP |
+| lenis | A confirmar | Scroll suave |
+
+**Fallback:** CSS transitions + IntersectionObserver como camada base, GSAP como progressive enhancement (regra do aprendizado crítico do GSAP CDN).
+
+#### Animações e estrutura visual
+| Elemento | Característica |
+|----------|---------------|
+| Hero | Split-screen com carrossel de fotos |
+| Transição entre seções | Scroll contínuo, sem corte, com degradê para preto entre as seções |
+| Navegação | Painel lateral com as 5 seções e scroll-spy (item ativo acompanha a seção visível) |
+| Botões | Dourados, quadrados, com shimmer em CSS |
+| Avaliações | Carrossel de avaliações |
+| Reserva | Formulário que monta a mensagem e abre o WhatsApp |
+
+#### Fundo e textura
+| Seção | Elemento visual |
+|-------|----------------|
+| Fundo geral | Preto `#0A0908` |
+| Painéis e cards | `#141210` |
+| Divisão entre seções | Degradê para preto em vez de linha ou curva |
+
+---
+
 ## RESUMO DE DIVERSIDADE — O QUE JÁ FOI USADO
 
 ### Fontes display (títulos grandes)
@@ -431,7 +476,8 @@ Preto `#000000` (paleta BMW M via getdesign.md) + faixa tricolor M (azul/roxo/ve
 | Libre Baskerville | Carol | Serifada editorial robusta, clínica |
 | Bodoni Moda | Renata | Serifada italiana de glamour, a mais sofisticada |
 | Playfair Display | Dr. Pedro | Serifada editorial clássica, advocacia |
-| Fraunces | Espaço Alfa | Serifada orgânica e cálida, eventos |
+| Fraunces | Espaço Alfa, Bento | Serifada orgânica e cálida, eventos e gastronomia |
+| Yellowtail (script) | Bento | Script cursiva, só no nome do restaurante |
 
 ### Animações de entrada já usadas
 - Fade In + Translate Y (universal — usar como base, variar com elementos adicionais)
@@ -440,7 +486,7 @@ Preto `#000000` (paleta BMW M via getdesign.md) + faixa tricolor M (azul/roxo/ve
 - Split Reveal (Renata — texto nasce de baixo)
 
 ### Animações de botão já usadas
-- Shimmer dourado (Everest)
+- Shimmer dourado (Everest, Bento em botão quadrado)
 - Radial Ripple / Luz do centro (Laryssa)
 - Stroke Animation / Borda desenhada (Carol)
 - Fill Reveal vertical / Preenchimento de baixo para cima (Renata)
@@ -467,6 +513,7 @@ Preto `#000000` (paleta BMW M via getdesign.md) + faixa tricolor M (azul/roxo/ve
 | Flinstones | Lenis | 1.1.14 |
 | Flash | A confirmar | — |
 | Petshop | A confirmar | — |
+| Bento | Lenis | A confirmar |
 
 **Regra:** A skill se chama `locomotive-scroll`, mas o código gerado usa **Lenis** (não o Locomotive legado). Lenis é a versão recomendada a partir de 2024.
 
